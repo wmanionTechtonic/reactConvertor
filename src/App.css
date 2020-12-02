@@ -1,38 +1,43 @@
-.App {
+.input_mono {
+  display: grid;
+  grid-template-areas: 
+    "label label"
+    "input input"
+    "minusButton plusButton";
+  background-color: lightcoral;
+  margin: 10px;
+}
+
+.input_mono__label {
+  grid-area: label;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input_mono__input--text {
+  grid-area: input;
+  width: 50%;
+  font-size: 2rem;
+  justify-self: center;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input_mono__input--slider {
+  grid-area: input;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input_mono__button {
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input_mono__button--minus {
+  grid-area: minusButton;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input_mono__button--plus {
+  grid-area: plusButton;
+}
+
+.output {
+  font-size: 3rem;
+  text-align: center;
 }
