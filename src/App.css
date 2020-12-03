@@ -1,19 +1,19 @@
-.input_mono {
+.input {
   display: grid;
   grid-template-areas: 
     "label label"
     "input input"
     "minusButton plusButton";
-  background-color: lightcoral;
+  background-color: lightblue;
   margin: 10px;
 }
 
-.input_mono__label {
+.input__label {
   grid-area: label;
   text-align: center;
 }
 
-.input_mono__input--text {
+.input__input--text {
   grid-area: input;
   width: 50%;
   font-size: 2rem;
@@ -21,23 +21,42 @@
   text-align: center;
 }
 
-.input_mono__input--slider {
+.input__input--slider {
   grid-area: input;
 }
 
-.input_mono__button {
+.input__button {
   font-size: 2rem;
 }
 
-.input_mono__button--minus {
+.input__button--minus {
   grid-area: minusButton;
 }
 
-.input_mono__button--plus {
+.input__button--plus {
   grid-area: plusButton;
 }
 
+.input__container {
+  display: grid;
+  grid-template-areas: 
+    "whole whole" 
+    "num den";
+}
+
+.input--wholeNum {
+  grid-area: whole;
+}
+
+.input--numerator {
+  grid-area: num;
+}
+
+.input--denominator {
+  grid-area: den;
+}
+
 .output {
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
 }
